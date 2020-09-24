@@ -31,9 +31,6 @@ body {
 }
 /*styling from exercise 12 day3 D3 */
 
-#hairmetal {
-  border-radius: 8px;
-}
 
 .chart::before {
   position: absolute;

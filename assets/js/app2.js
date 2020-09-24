@@ -123,6 +123,7 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
 
   // xLinearScale function above csv import
   var xLinearScale = xScale(data, chosenXAxis);
+   
 
   // Create y scale function
   var yLinearScale = d3.scaleLinear()
@@ -151,7 +152,7 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("cx", d => xLinearScale(d[chosenXAxis]))  // use the variable name to call the variable 
     .attr("cy", d => yLinearScale(d.obesity))  //updated
     .attr("r", 20)
-    .attr("fill", "white")
+    .attr("fill", "purple")
     .attr("opacity", ".5")
     .attr("stroke", "blue")
     //.append("text")
@@ -159,15 +160,14 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     //.text(function(d) {return d.abbr;});
     //.text("abbr");
   
-  var circlesText = chartGroup.selectAll("text")
+  var circlesText = chartGroup.selectAll("text")    
     .data(data)
-    .enter()
-    .append("text")
+    .enter().append("text")
     .text(d => d.abbr)
     .attr("dx", d => xLinearScale(d[chosenXAxis]))
-    .attr("dy", d => yLinearScale(d.obesity) + 4)
+    .attr("dy", d => yLinearScale(d.obesity))
     .attr("font-size", "9")
-    .attr("text-anchor", "middle")
+    .attr("class","stateText")
     .attr("font-weight", "bold")
     .attr("stroke", "1258DC")
 
