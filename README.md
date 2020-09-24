@@ -1,4 +1,5 @@
-# D3 Homework - Interactive Bubble Graph with D3 published: https://dsalisbury1141.github.io/D3-Challenge/.
+# D3 Homework - Interactive Bubble Graph with D3 
+published: https://dsalisbury1141.github.io/D3-Challenge/.
 
 
 
@@ -14,4 +15,5 @@ All estimates were adjusted to account for the complex survey design, including 
 
 <img img align="center" src="https://github.com/dsalisbury1141/Belly-Button-Biodiversity/blob/master/Images/dashboard2.PNG" width="600">
 !(https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/healthy-lifestyle.gif)
+
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
