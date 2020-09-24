@@ -13,4 +13,4 @@ All estimates were adjusted to account for the complex survey design, including 
 # Credit to the CDC Center for Disease Control and Prevention data collected between 2011 and 2014 https://www.cdc.gov/mmwr/volumes/66/wr/mm6650a1.htm
 
 <img img align="center" src="https://github.com/dsalisbury1141/Belly-Button-Biodiversity/blob/master/Images/dashboard2.PNG" width="600">
-![Getting Healthy](https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/healthy-lifestyle.gif)
+<img img align="center" src="https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/healthy-lifestyle.gif"
