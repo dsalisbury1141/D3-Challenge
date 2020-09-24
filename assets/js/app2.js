@@ -152,9 +152,10 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("cx", d => xLinearScale(d[chosenXAxis]))  // use the variable name to call the variable 
     .attr("cy", d => yLinearScale(d.obesity))  //updated
     .attr("r", 20)
-    .attr("fill", "purple")
+    //.attr("fill", "blue")
+    .attr("class", "stateCircle")
     .attr("opacity", ".5")
-    .attr("stroke", "blue")
+    //.attr("stroke", "blue")
     //.append("text")
     //.attr("class", "axis-text")
     //.text(function(d) {return d.abbr;});
@@ -181,7 +182,8 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("value", "poverty") // value to grab for event listener
     .classed("active", true)
     .text("In Poverty (%)")
-    .attr("stroke", "blue");
+    .attr("class","active");
+    //.attr("stroke", "blue");
 
   var ageLabel = labelsGroup.append("text")
     .attr("x", 0)
@@ -189,7 +191,8 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("value", "age") // value to grab for event listener
     .classed("inactive", true)
     .text("Age (Median)")
-    .attr("stroke", "blue");
+    .attr("class","active");
+    //.attr("stroke", "blue");
     
   var incomeLabel = labelsGroup.append("text")
     .attr("x", 0)
@@ -197,7 +200,8 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("value", "income") // value to grab for event listener
     .classed("inactive", true)
     .text("Hosehold Median Income)")
-    .attr("stroke", "blue");
+    .attr("class","active");
+    //.attr("stroke", "blue");
 
   // append y axis
   chartGroup.append("text")
@@ -206,6 +210,7 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
     .classed("axis-text", true)
+    .attr("class","active")
     .text("Obesity (%)");
 
   // updateToolTip function above csv import (Removed var**)
