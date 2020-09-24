@@ -1,6 +1,6 @@
 # D3 Homework - Interactive Bubble Graph with D3 published: https://dsalisbury1141.github.io/D3-Challenge/.
 
-![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
+
 
 ## Correlations Discovered Between Household Income, Age and Obesity
 
@@ -13,4 +13,5 @@ All estimates were adjusted to account for the complex survey design, including 
 # Credit to the CDC Center for Disease Control and Prevention data collected between 2011 and 2014 https://www.cdc.gov/mmwr/volumes/66/wr/mm6650a1.htm
 
 <img img align="center" src="https://github.com/dsalisbury1141/Belly-Button-Biodiversity/blob/master/Images/dashboard2.PNG" width="600">
-<img img align="center" src="https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/healthy-lifestyle.gif"
+!(https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/healthy-lifestyle.gif)
+![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
