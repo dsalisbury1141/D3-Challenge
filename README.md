@@ -1,7 +1,8 @@
 # D3 Homework - Interactive Bubble Graph with D3 
-published: https://dsalisbury1141.github.io/D3-Challenge/.
+
 <img align="center" src="https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/circleGraph.PNG" width="800">
 
+published on github : https://dsalisbury1141.github.io/D3-Challenge
 ## Correlations Discovered Between Household Income, Age and Obesity
 
 A Look At Household Income And Poverty vs. Obesity
