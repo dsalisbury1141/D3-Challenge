@@ -83,7 +83,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
   else  {
     label = "Income (Median)";
   }
-
+// ToolTip event
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([80, -60])
@@ -115,10 +115,9 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     data.poverty = +data.poverty;
     data.age = +data.age;
     data.obesity = +data.obesity;
-    //states.push(data.abbr);
     data.healthcare = +data.healthcare;
     data.income = +data.income;
-    //data.smokes = +data.smokes;
+    
   });
 
   // xLinearScale function above csv import
@@ -134,39 +133,25 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
   var bottomAxis = d3.axisBottom(xLinearScale);
   var leftAxis = d3.axisLeft(yLinearScale);
 
-  // append x axis
-  // var xAxis = chartGroup.append("g")
-  //   .classed("x-axis", true)
-  //   .attr("transform", `translate(0, ${height})`)
-  //   .call(bottomAxis);
-
-  // append y axis
-  // chartGroup.append("g")
-  //   .call(leftAxis);
-
-  // append initial circles
+    // append initial circles
   var circlesGroup = chartGroup.selectAll("circle")
     .data(data)
     .enter()
     .append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))  // use the variable name to call the variable 
-    .attr("cy", d => yLinearScale(d.obesity))  //updated
+    .attr("cy", d => yLinearScale(d.obesity))  
     .attr("r", 20)
     //.attr("fill", "blue")
     .attr("class", "stateCircle")
     .attr("opacity", ".5")
-    //.attr("stroke", "blue")
-    //.append("text")
-    //.attr("class", "axis-text")
-    //.text(function(d) {return d.abbr;});
-    //.text("abbr");
+    
     
     console.log(chartGroup.selectAll("text"))
   var circlesText = chartGroup.selectAll("text")    
     .data(data)
     .enter().append("text")
     .text(d => {
-      console.log(d.abbr)
+      console.log(d.abbr)  // troubleshoot data issues  (resolved)
       return d.abbr})
     .attr("dx", d => xLinearScale(d[chosenXAxis]))
     .attr("dy", d => yLinearScale(d.obesity))
@@ -188,7 +173,7 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
   // Create group for two x-axis labels
   var labelsGroup = chartGroup.append("g")
     .attr("transform", `translate(${width / 2}, ${height + 25})`);
-
+  // Create Poverty Label
   var povertyLabel = labelsGroup.append("text")
     .attr("x", 0)
     .attr("y", 20)
@@ -196,8 +181,8 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .classed("active", true)
     .text("In Poverty (%)")
     .attr("class","active");
-    //.attr("stroke", "blue");
-
+    
+  // Create Age Label
   var ageLabel = labelsGroup.append("text")
     .attr("x", 0)
     .attr("y", 40)
@@ -205,8 +190,8 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .classed("inactive", true)
     .text("Age (Median)")
     .attr("class","active");
-    //.attr("stroke", "blue");
     
+  // Create Income Label
   var incomeLabel = labelsGroup.append("text")
     .attr("x", 0)
     .attr("y", 60)
@@ -214,7 +199,7 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .classed("inactive", true)
     .text("Hosehold Median Income)")
     .attr("class","active");
-    //.attr("stroke", "blue");
+    
 
   // append y axis
   chartGroup.append("text")
@@ -226,9 +211,7 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     .attr("class","active")
     .text("Obesity (%)");
 
-  // updateToolTip function above csv import (Removed var**)
-  //circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
-
+  
   // x axis labels event listener
   labelsGroup.selectAll("text")
     .on("click", function() {
