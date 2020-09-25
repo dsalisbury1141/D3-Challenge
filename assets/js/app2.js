@@ -135,14 +135,14 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
   var leftAxis = d3.axisLeft(yLinearScale);
 
   // append x axis
-  var xAxis = chartGroup.append("g")
-    .classed("x-axis", true)
-    .attr("transform", `translate(0, ${height})`)
-    .call(bottomAxis);
+  // var xAxis = chartGroup.append("g")
+  //   .classed("x-axis", true)
+  //   .attr("transform", `translate(0, ${height})`)
+  //   .call(bottomAxis);
 
   // append y axis
-  chartGroup.append("g")
-    .call(leftAxis);
+  // chartGroup.append("g")
+  //   .call(leftAxis);
 
   // append initial circles
   var circlesGroup = chartGroup.selectAll("circle")
@@ -160,17 +160,30 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
     //.attr("class", "axis-text")
     //.text(function(d) {return d.abbr;});
     //.text("abbr");
-  
+    
+    console.log(chartGroup.selectAll("text"))
   var circlesText = chartGroup.selectAll("text")    
     .data(data)
     .enter().append("text")
-    .text(d => d.abbr)
+    .text(d => {
+      console.log(d.abbr)
+      return d.abbr})
     .attr("dx", d => xLinearScale(d[chosenXAxis]))
     .attr("dy", d => yLinearScale(d.obesity))
     .attr("font-size", "9")
     .attr("class","stateText")
     .attr("font-weight", "bold")
     .attr("stroke", "1258DC")
+
+    chartGroup.append("g")
+    .call(leftAxis);
+
+    
+    var xAxis = chartGroup.append("g")
+    .classed("x-axis", true)
+    .attr("transform", `translate(0, ${height})`)
+    .call(bottomAxis);
+
 
   // Create group for two x-axis labels
   var labelsGroup = chartGroup.append("g")
