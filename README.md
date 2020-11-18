@@ -20,4 +20,4 @@ Center for Disease Control and Prevention data collected between 2011 and 2014 h
 
 How to run my code: 
 1. Use the link above to activate the index and javascript and D3 activate
-2. Download my respository and run form VSCode
+2. Download my respository and run from VSCode
