@@ -1,5 +1,6 @@
 # D3 Homework - Interactive Bubble Graph with D3 
-published on github : https://dsalisbury1141.github.io/Obesity-Comparisons-Interactive-Graph/
+published on github : https://dsalisbury1141.github.io/Obesity-Comparisons-Interactive-Graph/   
+Click on each "X" value to see the correlations between household income, age and obesity
 
 <img align="center" src="https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/circleGraph.PNG" width="1000">
 
@@ -17,3 +18,6 @@ Center for Disease Control and Prevention data collected between 2011 and 2014 h
 
 <img img align="center" src="https://github.com/dsalisbury1141/D3-Challenge/blob/master/Images/people.jpg" width="600">
 
+How to run my code: 
+1. Use the link above to activate the index and javascript and D3 activate
+2. Download my respository and run form VSCode
