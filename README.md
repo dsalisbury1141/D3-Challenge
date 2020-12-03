@@ -1,4 +1,4 @@
-# D3 Homework - Interactive Bubble Graph with D3 
+# D3 Activity - Interactive Bubble Graph with D3 
 published on github : https://dsalisbury1141.github.io/Obesity-Comparisons-Interactive-Graph/   
 Click on each "X" value to see the correlations between household income, age and obesity
 
